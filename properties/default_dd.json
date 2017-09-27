@@ -1,0 +1,65 @@
+{
+    "default_dd": {
+        "settings": {
+            "analysis":{
+                "filter": {
+                    "possessive": {
+                        "type": "stemmer",
+                        "name": "possessive_english"
+                    },
+                    "stopwords": {
+                        "type": "stop",
+                        "stopwords": "_english_"
+                    }
+                },
+                "analyzer": {
+                    "pubmed-analyzer": {
+                        "tokenizer": "standard",
+                        "filter": [
+                            "possessive",
+                            "lowercase",
+                            "asciifolding",
+                            "stopwords"
+                        ]
+                    }
+                }
+            }
+        },
+         "mappings": {
+            "paper": {
+                "properties": {
+
+                    "title": {
+                        "type": "string",
+                        "similarity": "DFR",
+                        "store": true,
+                        "analyzer": "pubmed-analyzer"
+                    },
+                    "hedline": {
+                        "type": "string",
+                        "similarity": "DFR",
+                        "store": true,
+                        "analyzer": "pubmed-analyzer"
+                    },
+                    "abstract": {
+                        "type": "string",
+                        "similarity": "DFR",
+                        "store": true,
+                        "analyzer": "pubmed-analyzer"
+                    },
+                    "lead_paragraph": {
+                        "type": "string",
+                        "index": "no",
+                        "store": true
+                    },
+                    "full_text": {
+                        "type": "string",
+                        "similarity": "DFR",
+                        "store": true,
+                        "analyzer": "pubmed-analyzer"
+                    }
+                }
+            }
+        }
+    }
+}
