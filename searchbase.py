@@ -24,7 +24,7 @@ def make_query_dsl(s):
 	query = {
 		'query':{
 			'bool':{
-				'should':[
+				'must':[
 					{
 						"query_string":{
 							"default_field": "_all",
