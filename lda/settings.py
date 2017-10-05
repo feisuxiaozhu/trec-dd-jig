@@ -6,3 +6,5 @@ DATASET_FILE_DIR = '../real_doc/nyt_corpus/nyt_trectext'
 MONGO_CONNECTION_STRING = "mongodb://localhost:27017/"
 NYT_DATABASE = 'NYT_News'
 NEWS_COLLECTION = "News"
+TAGS_DATABASE = "NYT_Tags"
+TAGS_COLLECTION = "Tags"

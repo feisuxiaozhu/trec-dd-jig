@@ -3,7 +3,7 @@ import json
 import os
 from subprocess import call
 from config import *
-RUN_ID = "test3"
+RUN_ID = "test6"
 N = 10
 basedocresults = json.load(open(BASE_RESULT_FP))
 for topic in basedocresults:
