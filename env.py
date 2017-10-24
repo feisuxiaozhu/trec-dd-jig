@@ -24,6 +24,19 @@ def make_query_dsl(s):
 
 	return query
 
+def read_hiearchy():
+	dic = {}
+	with open(HIEARCHY_MAP_FP,'r') as f:
+		temps = f.read()
+	temps = re.split(r'<spliter>', temps)
+	for temp in temps:
+		id = re.search(r'<hiearchy number>([\d]+)</hiearchy number>',temp)
+		if bool(id) == True:
+			id = id.group(1)
+			vector = re.search(r'<hiearchy vector>([\d\s\w\W]+)</hiearchy vector>',temp).group(1)
+			dic[id] = vector
+	print(dic["2"])
+
 class env:
 	def __init__(self, topic_name, topic_id):
 		self.topic_id = topic_id
@@ -48,6 +61,5 @@ class env:
 		results[self.topic_id] = b 
 
 		return results
-
-a = env('Munch Scream Recovered','dd-1')
-print(a.reserve)
+print(HIEARCHY_MAP_FP)
+read_hiearchy()

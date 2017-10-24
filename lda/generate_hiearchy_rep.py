@@ -66,7 +66,9 @@ for i in os.listdir(topic_dir):
 	i = re.sub('_wiki.txt','',i)
 
 	result = turnvector(dimension, run(temp))
-	out = out+ 'hiearchy name: '+i+'\nhiearchy number: '+ str(counter)+ '\nhiearchy vector: '+str(result)+'\n<>'+'\n'
+	out = out+ '<hiearchy name>'+i+'</hiearchy name>\n'+ \
+			'<hiearchy number>'+ str(counter)+'</hiearchy number>\n'+ \
+			'<hiearchy vector>'+str(result)+'</hiearchy vector><spliter>\n'
 	counter +=1
 
 	
