@@ -59,7 +59,7 @@ def main():
     reviews_cursor = corpus_collection.find()
 
     dictionary = Dictionary(reviews_cursor, dictionary_path).build() #build dictionary from tag_corpus in data base
-    Corpus(reviews_cursor, dictionary, corpus_path).serialize() #build corpus from tag_corpus and dictionary
+    Corpus(reviews_cursor, dictionary, corpus_path).serialize() #build corpus from tag_NNS_corpus and dictionary
     Train.run(lda_model_path, corpus_path, lda_num_topics, dictionary) #run lda model with corpus, dictionary
 
 if __name__ == '__main__':
