@@ -13,3 +13,5 @@ JIG_FP = 'jig/jig.py'
 CUBE_TEST_FP ='scorer/cubetest.py'
 PARAM_FP = 'real_run/params'
 HIEARCHY_MAP_FP = 'lda/hiearchy_map.txt'
+
+JIG_LOG_FP = 'initialization.txt'
