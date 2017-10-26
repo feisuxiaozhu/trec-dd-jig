@@ -8,6 +8,8 @@ from pymongo import MongoClient
 import sys
 sys.path.append('/Users/shuchenzhu/Desktop/es_dd/trec-dd-jig/lda')
 from settings import *
+import numpy as np
+from subprocess import call
 
 def make_query_dsl(s):
 	query = {
@@ -32,6 +34,13 @@ def make_query_mongo(s):
 
 	query = {"docId": s}
 	return query
+
+def turnvector(size,list):
+	temp = np.zeros(size)
+	for i,j in list:
+		temp[i-1] = j
+	return temp
+
 #read hiearchy from .txt file prepared by ../generate_hiearchy_rep.py, return a dictionary
 def read_hiearchy():
 	dic = {}
@@ -53,12 +62,14 @@ def read_hiearchy():
 
 
 class env:
-	def __init__(self, topic_name, topic_id):
+	def __init__(self, topic_name, topic_id, dimension):
 		self.topic_id = topic_id
 		self.topic_name = topic_name
+		self.dimension = dimension
 		self.hiearchy_map = read_hiearchy()
 		self.reserve = self._build_reserve() #a dictionary of returned doc, key=docid, value=search score
 		self.reserve_vector = self.build_vector_reserve() #a dicionary of returned doc, key=docid, value=hiearchy vector
+		self.state = self.find_initial_state()
 
 	#hold first 500 returned document from given query = topic_name
 	#documents are represented by a docID and a topic vector
@@ -87,16 +98,62 @@ class env:
 			#make sure you indexex the mongoDB, otherwise so slow
 			lda_cursor = lda_collection.find_one(a)
 			result[i] = lda_cursor['lda']
-
+			result[i] = turnvector(self.dimension,result[i])
 		return result
 
+	def reset(self):
+		self.reserve = self._build_reserve()
+
+	def find_initial_state(self):
+		#shall run the jig using any runID, say score_only
+		counter = 0
+		docscore={}
+		run_id = 'initialization'
+		temp = self.reserve.items()
+		for i,j in temp:
+			docscore[counter] = i+':'+str(j)
+			counter += 1
+			if counter >= 5:
+				break
+		
+		a=["python", JIG_FP, "-runid", run_id, "-topic", self.topic_id, "-docs",docscore[0], docscore[1],docscore[2],docscore[3], docscore[4]]
+		os.remove(JIG_LOG_FP)
+		subprocess.check_output(a)
+
+		with open(JIG_LOG_FP) as f:
+			contents = f.readlines()
+			
+
+			on_topic = False
+			for i in contents:
+				judge = i.split()[4]
+				if judge == '1': on_topic= True
+				#remove searched docs from reserve
+				used_doc = i.split()[2]
+				self.reserve.pop(used_doc)
+
+			#if no doc is on topic, the initial state is null
+			if on_topic == False: return 'NULL'
+			#if there is on topic docs, find the initial state:
+			
+
+
+
+		
+
+
+	
 
 
 
 
 
-a = env('knock off','dd1')
-print(a.reserve_vector)
+
+a = env('Dwarf Planets','dd17-6',75)
+# print(a.reserve_vector)
+print(a.reserve)
+#a.reset()
+#print(a.state)
 
 
 
