@@ -82,7 +82,7 @@ class env:
 
 		results = {}
 		query_dsl = make_query_dsl(self.topic_name)
-		raw_result = es_client.search(index=INDEX_NAME, body=query_dsl, size=50)
+		raw_result = es_client.search(index=INDEX_NAME, body=query_dsl, size=100)
 		temp = raw_result['hits']['hits']
 		b=''
 		for a in temp:
@@ -161,18 +161,16 @@ class env:
 				for j,k in dot_products.items():					
 					running_sum[j] = k + running_sum[j]
 			
-			return max(running_sum,key=running_sum.get)
+			#the initial state is determined by which topic has largest running sum value of dot products
+			return running_sum
 
+	#given the action (topic from 1 to 12), return the top 5 docs that are most related to such topic
+	def step(self,action)：
 			
 
 
 
-	
-
-
-
-
-a = env('Dwarf Planets','dd17-6',75)
+a = env('Eggs actually are good for you','dd17-16',75)
 print(a.state)
 # print(a.reserve_vector)
 #print(a.reserve)
