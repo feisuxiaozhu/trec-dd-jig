@@ -59,6 +59,9 @@ def read_hiearchy():
 			dic[id]=vector		
 	return dic
 
+#given docid return a list of products between doc_vector and hiearchy_vectors
+
+
 
 
 class env:
@@ -69,7 +72,7 @@ class env:
 		self.hiearchy_map = read_hiearchy()
 		self.reserve = self._build_reserve() #a dictionary of returned doc, key=docid, value=search score
 		self.reserve_vector = self.build_vector_reserve() #a dicionary of returned doc, key=docid, value=hiearchy vector
-		self.state = self.find_initial_state()
+		self.state = self.find_initial_state() # max value key in the running sum between on topic docs and hiearchy map
 
 	#hold first 500 returned document from given query = topic_name
 	#documents are represented by a docID and a topic vector
@@ -104,6 +107,15 @@ class env:
 	def reset(self):
 		self.reserve = self._build_reserve()
 
+	def dot_with_hiearchy(self,docid):
+		results={}
+		docid = docid
+		doc_vector = self.reserve_vector[docid]
+		for i,j in self.hiearchy_map.items():
+			result = sum(k[0]*k[1] for k in zip(doc_vector,j))
+			results[i] = result
+		return results
+
 	def find_initial_state(self):
 		#shall run the jig using any runID, say score_only
 		counter = 0
@@ -125,9 +137,12 @@ class env:
 			
 
 			on_topic = False
+			on_topic_docs=[]
 			for i in contents:
 				judge = i.split()[4]
-				if judge == '1': on_topic= True
+				if judge == '1': 
+					on_topic= True
+					on_topic_docs.append(i.split()[2])
 				#remove searched docs from reserve
 				used_doc = i.split()[2]
 				self.reserve.pop(used_doc)
@@ -136,10 +151,20 @@ class env:
 			if on_topic == False: return 'NULL'
 			#if there is on topic docs, find the initial state:
 			
+			#initialize a running sum:
+			running_sum = {}
+			for i in range(12):
+				running_sum[str(i+1)] = 0.0
+			#update the running sum over all on topic docs	
+			for i in on_topic_docs:
+				dot_products = self.dot_with_hiearchy(i)
+				for j,k in dot_products.items():					
+					running_sum[j] = k + running_sum[j]
+			
+			return max(running_sum,key=running_sum.get)
 
+			
 
-
-		
 
 
 	
@@ -147,13 +172,12 @@ class env:
 
 
 
-
-
 a = env('Dwarf Planets','dd17-6',75)
+print(a.state)
 # print(a.reserve_vector)
-print(a.reserve)
+#print(a.reserve)
 #a.reset()
-#print(a.state)
+#print(a.hiearchy_map)
 
 
 
