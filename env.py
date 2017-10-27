@@ -59,11 +59,6 @@ def read_hiearchy():
 			dic[id]=vector		
 	return dic
 
-#given docid return a list of products between doc_vector and hiearchy_vectors
-
-
-
-
 class env:
 	def __init__(self, topic_name, topic_id, dimension):
 		self.topic_id = topic_id
@@ -135,7 +130,6 @@ class env:
 		with open(JIG_LOG_FP) as f:
 			contents = f.readlines()
 			
-
 			on_topic = False
 			on_topic_docs=[]
 			for i in contents:
@@ -148,32 +142,40 @@ class env:
 				self.reserve.pop(used_doc)
 
 			#if no doc is on topic, the initial state is null
-			if on_topic == False: return 'NULL'
-			#if there is on topic docs, find the initial state:
-			
-			#initialize a running sum:
-			running_sum = {}
-			for i in range(12):
-				running_sum[str(i+1)] = 0.0
-			#update the running sum over all on topic docs	
+			null = np.zeros(self.dimension)
+			if on_topic == False: return null
+			#if there is on topic docs, find the initial state, which is the sum of on topic docs' vectors
+			running_sum = np.zeros(self.dimension)
 			for i in on_topic_docs:
-				dot_products = self.dot_with_hiearchy(i)
-				for j,k in dot_products.items():					
-					running_sum[j] = k + running_sum[j]
-			
-			#the initial state is determined by which topic has largest running sum value of dot products
+				vector = self.reserve_vector[i]
+				running_sum = vector + running_sum
 			return running_sum
 
-	#given the action (topic from 1 to 12), return the top 5 docs that are most related to such topic
-	def step(self,action)：
+
+			#initialize a running sum:
+			# running_sum = {}
+			# for i in range(12):
+			# 	running_sum[str(i+1)] = 0.0
+			# #update the running sum over all on topic docs	
+			# for i in on_topic_docs:
+			# 	dot_products = self.dot_with_hiearchy(i)
+			# 	for j,k in dot_products.items():					
+			# 		running_sum[j] = k + running_sum[j]
 			
+			# temp = np.zeros(12)
+			# for i, j in running_sum.items():
+			# 	temp[int(i)-1] = j
 
+			# return temp
 
+	#given the action (topic from 1 to 12), return the top 5 docs that are most related to such topic
+	#def step(self,action)：
+			#given action, the returned doc is the top 5 
 
-a = env('Eggs actually are good for you','dd17-16',75)
+a = env('Dwarf Planets','dd17-6',75)
 print(a.state)
-# print(a.reserve_vector)
-#print(a.reserve)
+#print(a.reserve_vector)
+#(a.reserve)
 #a.reset()
 #print(a.hiearchy_map)
 
