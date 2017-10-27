@@ -64,10 +64,12 @@ class env:
 		self.topic_id = topic_id
 		self.topic_name = topic_name
 		self.dimension = dimension
+		self.num_of_on_topics = 0
 		self.hiearchy_map = read_hiearchy()
 		self.reserve = self._build_reserve() #a dictionary of returned doc, key=docid, value=search score
 		self.reserve_vector = self.build_vector_reserve() #a dicionary of returned doc, key=docid, value=hiearchy vector
 		self.state = self.find_initial_state() # max value key in the running sum between on topic docs and hiearchy map
+		
 
 	#hold first 500 returned document from given query = topic_name
 	#documents are represented by a docID and a topic vector
@@ -149,6 +151,10 @@ class env:
 			for i in on_topic_docs:
 				vector = self.reserve_vector[i]
 				running_sum = vector + running_sum
+
+			#normalize state vector later, just store the number of on topic docs
+			self.num_of_on_topics = len(on_topic_docs) + self.num_of_on_topics
+
 			return running_sum
 
 
@@ -174,6 +180,7 @@ class env:
 
 a = env('Dwarf Planets','dd17-6',75)
 print(a.state)
+print(a.num_of_on_topics)
 #print(a.reserve_vector)
 #(a.reserve)
 #a.reset()
