@@ -68,11 +68,12 @@ class environment:
 		self.reward_quantum = 100
 		self.number_of_iteration = 0
 		self.number_of_max_iteration = 15
+		self.search_history='' #store the returned docs for this session
 		self.hiearchy_map = read_hiearchy()
 		self.reserve = self._build_reserve() #a dictionary of returned doc, key=docid, value=search score
 		self.reserve_vector = self.build_vector_reserve() #a dicionary of returned doc, key=docid, value=hiearchy vector
 		self.state = self.find_initial_state() # max value key in the running sum between on topic docs and hiearchy map
-		self.search_histroy='' #store the returned docs for this session
+		
 		
 
 	#hold first 500 returned document from given query = topic_name
@@ -110,7 +111,7 @@ class environment:
 		self.number_of_iteration = 0
 		self.reserve = self._build_reserve()
 		self.state = self.find_initial_state()
-		self.search_histroy = ''
+
 		return self.state
 
 	def dot_with_hiearchy(self,docid):
@@ -141,6 +142,10 @@ class environment:
 		except OSError:
 			pass
 		subprocess.check_output(a)
+		#after run the jig, update self.search_history
+		self.search_history = docscore[0]+' '+docscore[1]+' '+docscore[2]+' '+docscore[3]+' '+docscore[4]+' </score>'
+
+
 
 		with open(JIG_LOG_FP) as f:
 			contents = f.readlines()
@@ -192,11 +197,19 @@ class environment:
 			for i in top_five:
 				docscore[counter] = i+":"+str(5-counter)
 				counter +=1
+			#if there is not sufficient returned docs, then fill in with empty docs
+			if counter <4:
+				for k in range(counter,5):
+					docscore[counter] = '0000000:0'
+					counter+=1
 
 			run_id = 'initialization'
 			a=["python", JIG_FP, "-runid", run_id, "-topic", self.topic_id, "-docs",docscore[0], docscore[1],docscore[2],docscore[3], docscore[4]]
 			os.remove(JIG_LOG_FP)
 			subprocess.check_output(a)
+			#after check with jig, update search history
+			self.search_history= self.search_history+ docscore[0]+' '+docscore[1]+' '+docscore[2]+' '+docscore[3]+' '+docscore[4]+' </score>'
+
 			with open(JIG_LOG_FP) as f:
 				contents = f.readlines()
 			on_topic_docs=[]
@@ -221,13 +234,17 @@ class environment:
 
 
 
-# a = env('Dwarf Planets','dd17-6',75)
+# a = environment('Dwarf Planets','dd17-6',75)
+# a.step('1')
+# a.step('2')
+# a.reset()
 # print(a.state)
 #print(a.num_of_on_topics)
 #print(a.reserve_vector)
 #(a.reserve)
 #a.reset()
 #print(a.hiearchy_map['1'])
+# print(a.search_history)
 
 
 
