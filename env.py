@@ -59,13 +59,15 @@ def read_hiearchy():
 			dic[id]=vector		
 	return dic
 
-class env:
+class environment:
 	def __init__(self, topic_name, topic_id, dimension):
 		self.topic_id = topic_id
 		self.topic_name = topic_name
 		self.dimension = dimension
 		self.num_of_on_topics = 0
 		self.reward_quantum = 100
+		self.number_of_iteration = 0
+		self.number_of_max_iteration = 15
 		self.hiearchy_map = read_hiearchy()
 		self.reserve = self._build_reserve() #a dictionary of returned doc, key=docid, value=search score
 		self.reserve_vector = self.build_vector_reserve() #a dicionary of returned doc, key=docid, value=hiearchy vector
@@ -103,7 +105,11 @@ class env:
 		return result
 
 	def reset(self):
+		self.num_of_on_topics = 0
+		self.number_of_iteration = 0
 		self.reserve = self._build_reserve()
+		self.state = self.find_initial_state()
+		return self.state
 
 	def dot_with_hiearchy(self,docid):
 		results={}
@@ -114,6 +120,7 @@ class env:
 			results[i] = result
 		return results
 
+	#return the state vector associated with the on topic docs in first round of interaction
 	def find_initial_state(self):
 		#shall run the jig using any runID, say score_only
 		counter = 0
@@ -127,7 +134,10 @@ class env:
 				break
 		
 		a=["python", JIG_FP, "-runid", run_id, "-topic", self.topic_id, "-docs",docscore[0], docscore[1],docscore[2],docscore[3], docscore[4]]
-		os.remove(JIG_LOG_FP)
+		try:
+			os.remove(JIG_LOG_FP)
+		except OSError:
+			pass
 		subprocess.check_output(a)
 
 		with open(JIG_LOG_FP) as f:
@@ -155,30 +165,10 @@ class env:
 
 			#normalize state vector later, just store the number of on topic docs
 			self.num_of_on_topics = len(on_topic_docs) + self.num_of_on_topics
-
-
-
+			self.number_of_iteration += 1
 			return running_sum
 
-
-			#initialize a running sum:
-			# running_sum = {}
-			# for i in range(12):
-			# 	running_sum[str(i+1)] = 0.0
-			# #update the running sum over all on topic docs	
-			# for i in on_topic_docs:
-			# 	dot_products = self.dot_with_hiearchy(i)
-			# 	for j,k in dot_products.items():					
-			# 		running_sum[j] = k + running_sum[j]
-			
-			# temp = np.zeros(12)
-			# for i, j in running_sum.items():
-			# 	temp[int(i)-1] = j
-
-			# return temp
-
 	#given the action (topic from 1 to 12), return the top 5 docs that are most related to such topic to simulated user
-
 	def step(self, action):
 			#given action, the returned doc is the top 5 
 			#first find the dot product between docs in reserve with topic vector
@@ -220,9 +210,10 @@ class env:
 				vector = self.reserve_vector[i]
 				self.state = self.state + vector
 			self.num_of_on_topics = len(on_topic_docs) + self.num_of_on_topics
+			self.number_of_iteration += 1
 			done = False #need to return done to be compatible with the DQN model we use
-
-
+			if self.number_of_iteration >= self.number_of_max_iteration:
+				done = True
 			return self.state, reward, done
 
 

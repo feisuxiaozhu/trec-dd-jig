@@ -15,3 +15,4 @@ PARAM_FP = 'real_run/params'
 HIEARCHY_MAP_FP = 'lda/hiearchy_map.txt'
 
 JIG_LOG_FP = 'initialization.txt'
+TOPIC_FP='topics.txt'

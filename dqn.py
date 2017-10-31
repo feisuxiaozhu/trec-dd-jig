@@ -1,4 +1,4 @@
-from env import env
+from env import environment
 import random
 import gym
 import numpy as np
@@ -60,35 +60,36 @@ class DQNAgent:
     def save(self, name):
         self.model.save_weights(name)
 
-topic_name = 'Dwarf Planets'
-topic_id = 'dd17-6'
-state_size = 75
-action_size = 12
-agent = DQNAgent(state_size, action_size)
-done = False
-batch_size = 32
+# topic_name = 'Dwarf Planets'
+# topic_id = 'dd17-6'
+# state_size = 75
+# action_size = 12
+# agent = DQNAgent(state_size, action_size)
+# done = False
+# batch_size = 32
 
-env = env(topic_name,topic_id, state_size)
 
-for e in range(EPISODES):
-	state = env.reset()
-	state = np.reshape(state, [1,state_size])
-	for time in range(500):
-		action = agent.act(state)+1
-		action = str(action)
-		next_state, reward, done = env.step(action)
-		next_state = np.reshape(next_state, [1,state_size])
-		action = int(action)-1
-		agent.remember(state, action, reward, next_state, done)
-		state = next_state
-		if done:
-			print("episode: {}/{}, # of interations: {}, e: {:.2}".format(e, EPISODES, time, agent.epsilon))
-			#after each episode, run the agent on test system see if score improves:
-			
+# env = env(topic_name,topic_id, state_size)
 
-			break
-		if len(agent.memory) > batch_size:
-			agent.replay(batch_size)
+# for e in range(EPISODES):
+# 	state = env.reset()
+# 	state = np.reshape(state, [1,state_size])
+# 	for time in range(500):
+# 		action = agent.act(state)+1
+# 		action = str(action)
+# 		next_state, reward, done = env.step(action)
+# 		next_state = np.reshape(next_state, [1,state_size])
+# 		action = int(action)-1
+# 		agent.remember(state, action, reward, next_state, done)
+# 		state = next_state
+# 		if done:
+# 			print("episode: {}/{}, # of interations: {}, e: {:.2}".format(e, EPISODES, time, agent.epsilon))
+# 			#after each episode, run the agent on test system see if score improves:
+
+
+# 			break
+# 		if len(agent.memory) > batch_size:
+# 			agent.replay(batch_size)
 
 
 
