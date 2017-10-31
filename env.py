@@ -72,6 +72,7 @@ class environment:
 		self.reserve = self._build_reserve() #a dictionary of returned doc, key=docid, value=search score
 		self.reserve_vector = self.build_vector_reserve() #a dicionary of returned doc, key=docid, value=hiearchy vector
 		self.state = self.find_initial_state() # max value key in the running sum between on topic docs and hiearchy map
+		self.search_histroy='' #store the returned docs for this session
 		
 
 	#hold first 500 returned document from given query = topic_name
@@ -109,6 +110,7 @@ class environment:
 		self.number_of_iteration = 0
 		self.reserve = self._build_reserve()
 		self.state = self.find_initial_state()
+		self.search_histroy = ''
 		return self.state
 
 	def dot_with_hiearchy(self,docid):

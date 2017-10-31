@@ -53,6 +53,7 @@ for i in topics:
 
 #Not run the trained agent and see how it works:
 N = 10
+results={}
 for i in topics:
 	topic_number = i.split()[0]
 	topic_id = 'dd17-'+str(topic_number)
@@ -63,4 +64,4 @@ for i in topics:
 	env = environment(topic_name,topic_id,state_size)
 
 	#start 10 interactions between search engine and user
-	
+
