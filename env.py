@@ -65,6 +65,7 @@ class env:
 		self.topic_name = topic_name
 		self.dimension = dimension
 		self.num_of_on_topics = 0
+		self.reward_quantum = 100
 		self.hiearchy_map = read_hiearchy()
 		self.reserve = self._build_reserve() #a dictionary of returned doc, key=docid, value=search score
 		self.reserve_vector = self.build_vector_reserve() #a dicionary of returned doc, key=docid, value=hiearchy vector
@@ -155,6 +156,8 @@ class env:
 			#normalize state vector later, just store the number of on topic docs
 			self.num_of_on_topics = len(on_topic_docs) + self.num_of_on_topics
 
+
+
 			return running_sum
 
 
@@ -174,17 +177,64 @@ class env:
 
 			# return temp
 
-	#given the action (topic from 1 to 12), return the top 5 docs that are most related to such topic
-	#def step(self,action)：
-			#given action, the returned doc is the top 5 
+	#given the action (topic from 1 to 12), return the top 5 docs that are most related to such topic to simulated user
 
-a = env('Dwarf Planets','dd17-6',75)
-print(a.state)
-print(a.num_of_on_topics)
+	def step(self, action):
+			#given action, the returned doc is the top 5 
+			#first find the dot product between docs in reserve with topic vector
+			result={} # a dicionary later to store the doc products
+			topic_vector = self.hiearchy_map[action] #note the action is a string between 1 to 12
+			for i,j in self.reserve.items():
+				doc_vector = self.reserve_vector[i]
+				result[i] = sum(k[0]*k[1] for k in zip(topic_vector,doc_vector))
+			top_five = sorted(result, key=result.get, reverse=True)[:5] # a list of doc_id of top five docs in the reserve related to topic_vector
+			
+			#second remove these docs from both self.reserve, notice we will never delete anything from self.reserve_vector
+			for i in top_five:
+				self.reserve.pop(i)
+
+			#third send top five docs to jig, find out reward
+			#notice the reward is just ontopic/offtopic. Very straightforward.
+			docscore={}
+			counter=0
+			for i in top_five:
+				docscore[counter] = i+":"+str(5-counter)
+				counter +=1
+
+			run_id = 'initialization'
+			a=["python", JIG_FP, "-runid", run_id, "-topic", self.topic_id, "-docs",docscore[0], docscore[1],docscore[2],docscore[3], docscore[4]]
+			os.remove(JIG_LOG_FP)
+			subprocess.check_output(a)
+			with open(JIG_LOG_FP) as f:
+				contents = f.readlines()
+			on_topic_docs=[]
+			reward = 0
+			for i in contents:
+				judge = i.split()[4]
+				if judge == '1':
+					on_topic_docs.append(i.split()[2])
+					reward = reward + self.reward_quantum
+
+			#fourth find the new state vector and update the number of total on topic docs
+			for i in on_topic_docs:
+				vector = self.reserve_vector[i]
+				self.state = self.state + vector
+			self.num_of_on_topics = len(on_topic_docs) + self.num_of_on_topics
+			done = False #need to return done to be compatible with the DQN model we use
+
+
+			return self.state, reward, done
+
+
+
+
+# a = env('Dwarf Planets','dd17-6',75)
+# print(a.state)
+#print(a.num_of_on_topics)
 #print(a.reserve_vector)
 #(a.reserve)
 #a.reset()
-#print(a.hiearchy_map)
+#print(a.hiearchy_map['1'])
 
 
 
