@@ -60,14 +60,15 @@ def read_hiearchy():
 	return dic
 
 class environment:
-	def __init__(self, topic_name, topic_id, dimension):
+	def __init__(self, topic_name, topic_id, dimension, iteration, reserve):
 		self.topic_id = topic_id
 		self.topic_name = topic_name
 		self.dimension = dimension
 		self.num_of_on_topics = 0
 		self.reward_quantum = 100
 		self.number_of_iteration = 0
-		self.number_of_max_iteration = 15
+		self.number_of_max_iteration = iteration
+		self.reserve_size = reserve
 		self.search_history='' #store the returned docs for this session
 		self.hiearchy_map = read_hiearchy()
 		self.reserve = self._build_reserve() #a dictionary of returned doc, key=docid, value=search score
@@ -79,12 +80,13 @@ class environment:
 	#hold first 500 returned document from given query = topic_name
 	#documents are represented by a docID and a topic vector
 	def _build_reserve(self):
+		self.topic_name = re.sub('[/]','',self.topic_name)
 		es_client = elasticsearch.client.Elasticsearch(
 			'http://{}:{}'.format(ES_HOST, ES_PORT), timeout=30)
 
 		results = {}
 		query_dsl = make_query_dsl(self.topic_name)
-		raw_result = es_client.search(index=INDEX_NAME, body=query_dsl, size=100)
+		raw_result = es_client.search(index=INDEX_NAME, body=query_dsl, size=self.reserve_size)
 		temp = raw_result['hits']['hits']
 		b=''
 		for a in temp:
