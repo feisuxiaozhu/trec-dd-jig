@@ -56,7 +56,8 @@ def read_hiearchy():
 			vector.pop(0) #get rid of [
 			vector.pop(-1) #get rid of ]
 			vector = list(map(float,vector)) #convert the list from string to float
-			dic[id]=vector		
+			dic[id]=vector
+
 	return dic
 
 class environment:

@@ -63,7 +63,6 @@ def read_hiearchy():
 	dic['6'] = [x+y for x,y in zip(dic['2'],dic['3'])]
 	dic['7'] = [x+y for x,y in zip(dic['1'],dic['2'])]
 	dic['7'] = [x+y for x,y in zip(dic['3'],dic['7'])]
-	print(dic)
 	return dic 
 
 class environment:
