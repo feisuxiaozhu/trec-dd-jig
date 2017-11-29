@@ -18,7 +18,7 @@ done = False
 batch_size = 32
 
 #create an environment for training on different topics
-EPISODES = 40
+EPISODES = 30
 RESERVE= 150
 ITERATION = 15
 for i in topics:
@@ -105,7 +105,7 @@ for i in topics:
 N = 10 #total of ten rounds
 results={}
 for i in topics:
-
+	reward_record = []
 	topic_number = i.split()[0]
 	topic_id = 'dd17-'+str(topic_number)
 	topic_name_tokens = i.split()[1:]
@@ -124,6 +124,11 @@ for i in topics:
 		action = agent.act(state)+1
 		action = str(action)
 		next_state, reward, done = env.step(action)
+		reward_record.append(reward)
+		if done:
+			break
+		if reward_record[k-1]/reward_record[k]>=2: #huge drop of number of on topic docs
+			break
 		next_state = np.reshape(next_state, [1,state_size])
 		#next_state = next_state / env.num_of_on_topics
 		action = int(action)-1

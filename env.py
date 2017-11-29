@@ -67,7 +67,7 @@ class environment:
 		self.dimension = dimension
 		self.num_of_on_topics = 0
 		self.reward_quantum = 100
-		self.number_of_iteration = 0
+		self.number_of_iteration = 1
 		self.number_of_max_iteration = iteration
 		self.reserve_size = reserve
 		self.search_history='' #store the returned docs for this session
@@ -111,7 +111,7 @@ class environment:
 
 	def reset(self):
 		self.num_of_on_topics = 0
-		self.number_of_iteration = 0
+		self.number_of_iteration = 1
 		self.reserve = self._build_reserve()
 		self.state = self.find_initial_state()
 
@@ -223,6 +223,7 @@ class environment:
 					on_topic_docs.append(i.split()[2])
 					reward = reward + self.reward_quantum
 
+			
 			#fourth find the new state vector and update the number of total on topic docs
 			for i in on_topic_docs:
 				vector = self.reserve_vector[i]
@@ -230,6 +231,8 @@ class environment:
 			self.num_of_on_topics = len(on_topic_docs) + self.num_of_on_topics
 			self.number_of_iteration += 1
 			done = False #need to return done to be compatible with the DQN model we use
+			if reward == 0:
+				done = True #if reward is zero then done
 			if self.number_of_iteration >= self.number_of_max_iteration:
 				done = True
 			return self.state, reward, done
