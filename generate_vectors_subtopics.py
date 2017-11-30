@@ -72,26 +72,27 @@ for i in os.listdir(topics_path): #topic loop
 			vectors.append(result)
 			out = out+'<sub hiearchy number>'+ j +'</sub hiearchy number>\n'+\
 					'<sub hiearchy vector>'+str(result)+'</sub hiearchy vector><spliter>\n'
-		counter+=1
+			counter+=1
 
 	if counter > 1: #if more than one subtopic exists, create powerset of subtopics:
 		number_two_set = math.factorial(counter)/(2.0*math.factorial(counter-2.0)) #find the number of vectors that represents two subtopics
 		number_two_set = int(number_two_set)
-		number_of_subtopics = counter -1
+		number_of_subtopics = counter 
 
-		for i in range(counter-2):
-			for j in range(i+1,counter-1):
+		for i in range(counter-1):
+			for j in range(i+1,counter):
 				vector = (vectors[i]+vectors[j])/2
 				out = out+'<sub hiearchy number>'+ str(number_of_subtopics+1) +'</sub hiearchy number>\n'+\
 				 '<sub hiearchy vector>'+str(vector)+'</sub hiearchy vector><spliter>\n'
 				number_of_subtopics+=1
 
-		sum = vectors[0] #find the vector that represents all
-		for i in range(1,counter-1):
-			sum = vectors[i] + sum
-		sum = sum / (counter-1)
-		out = out+'<sub hiearchy number>'+ str(number_of_subtopics+1) +'</sub hiearchy number>\n'+\
-				 '<sub hiearchy vector>'+str(sum)+'</sub hiearchy vector><spliter>\n'
+		if counter >2: #only need to do this if more than 2 subtopics exist
+			sum = vectors[0] #find the vector that represents all
+			for i in range(1,counter):
+				sum = vectors[i] + sum
+			sum = sum / (counter)
+			out = out+'<sub hiearchy number>'+ str(number_of_subtopics+1) +'</sub hiearchy number>\n'+\
+					 '<sub hiearchy vector>'+str(sum)+'</sub hiearchy vector><spliter>\n'
 
 	f = open(subtopics_path+'/'+"sub_hiearchy_map.txt", 'w')
 	f.write(out)
