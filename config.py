@@ -17,3 +17,5 @@ HIEARCHY_MAP_FP = 'lda/hiearchy_map.txt'
 
 JIG_LOG_FP = 'initialization.txt'
 TOPIC_FP='topics.txt'
+
+SUBTOPIC_FP = '/Users/shuchenzhu/Desktop/es_dd/trec-dd-jig/subtopics'
