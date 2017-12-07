@@ -1,0 +1,232 @@
+A '''business''' (also known as an '''enterprise''', a '''company''', or a '''firm''') is an [[organization]]al [[entity]] and [[Legal personality|legal entity]] made up of an [[Voluntary association|association]] of people, be they [[Natural person|natural]], [[Legal personality|legal]], or a mixture of both who share a common purpose and unite in order to focus their various [[Desire|talents]] and organize their collectively available [[Skill|skills]] or [[Resource|resources]] to achieve specific declared [[Goal|goals]] and are involved in the provision of [[Good (economics)|goods]] and [[Service (economics)|services]] to [[consumer]]s.<A business can also be described as an organisation that provides goods and services for human needs.  
+
+A company or association of persons can be created at [[law]] as legal person so that the company in itself can accept [[limited liability]] for civil responsibility and taxation incurred as members perform (or fail) to discharge their [[duty]] within the [[Common knowledge|publicly declared]] ''[[Incorporation (business)|"birth certificate"]]'' or [[Publishing|published]] [[policy]].
+
+Because companies are legal persons, they also may associate and register themselves as companies – often known as a [[corporate group]]. When the company closes it may need a ''[[Liquidation|"death certificate"]]'' to avoid further legal obligations.
+
+Businesses serve as conductors of economic activity, and are prevalent in [[capitalism|capitalist]] [[economy|economies]], where most of them are [[Private property|privately owned]] and provide [[goods and services]] [[allocation of resources|allocated]] through a [[Market (economics)|market]] to [[consumer]]s and [[customer]]s in [[trade|exchange]] for other goods, services, money, or other forms of exchange that hold intrinsic [[economic value]].
+
+Businesses may also be social [[nonprofit organization|nonprofit]] enterprises or [[state-owned enterprise|state-owned]] public enterprises operated by governments with specific social and economic objectives. 
+
+A business owned by multiple private individuals may form as an [[corporation|incorporated]] company or jointly organized as a partnership. Countries have different laws that may ascribe different rights to the [[Types of business entity|various business entities]].
+
+The word "business" can refer to a particular organization or to an entire [[market sector]] (for example, "the finance business" is "the financial sector") or to all economic sectors collectively ("the [[business sector]]"). Compound forms such as "[[agribusiness]]" represent subsets of the concept's broader meaning, which encompasses all activity by suppliers of goods and services.
+
+Typically private-sector businesses aim to [[Profit maximization|maximize their profit]], although in some contexts they may aim to maximize their [[sales revenue]] or their [[market share]]. Government-run businesses may aim to maximize some measure of [[social welfare]].
+
+== Etymology ==
+The English word ''company'' has its origins in the [[Old French]] military term ''compaignie'' (first recorded in 1150), meaning a "body of soldiers",<ref>{{OEtymD|company}}</ref> and originally from the [[Late Latin]] word ''companio'' "companion, one who eats bread [''pane''] with you", first attested in the ''[[Salic law|Lex Salica]]'' as a calque of the [[Germanic languages|Germanic]] expression *''gahlaibo'' (literally, "with bread"), related to [[Old High German]] ''galeipo'' "companion" and [[Gothic language|Gothic]] ''gahlaiba'' "messmate". By 1303, the word referred to [[Guild|trade guilds]]. Usage of ''company'' to mean "business association" was first recorded in 1553,{{citation needed|date=September 2014}} and the abbreviation "co." dates from 1769.
+
+The Old English signs (Northumbrian) "care, anxiety, occupation," from being "careful, anxious, busy, occupied, diligent" (see busy (adj.)) + -ness. Middle English sense of "state of being much occupied or engaged" (mid-14c.) is obsolete, replaced by busyness. 
+
+The sense of "a person's work, occupation" is first recorded late 14c. (in late Old English big (adj.) appears as a noun in the sense "occupation, state of employment"). Meaning "what one is about at the moment" is from the 1590s. The sense of "trade, commercial engagements" is first attested 1727. 
+
+== Forms ==
+{{Main|List of business entities}}
+
+Forms of business ownership vary by [[jurisdiction]], but several common entities exist:
+* '''Sole proprietorship:''' A [[sole proprietorship]], also known as a sole trader, is owned by one person and operates for their benefit. The owner operates the business alone and may hire [[employees]]. A sole proprietor has unlimited [[legal liability|liability]] for all obligations incurred by the business, whether from [[operating cost]]s or [[judgment]]s against the business. All [[asset]]s of the business belong to a sole proprietor, including, for example, computer infrastructure, any [[inventory]], [[manufacturing]] equipment, or [[retail]] [[Fixture (property law)|fixtures]], as well as any [[real property]] owned by the sole proprietor.
+* '''Partnership:'''  A [[partnership]] is a business owned by two or more people. In most forms of partnerships, each partner has unlimited liability for the debts incurred by the business. The three most prevalent types of for-profit partnerships are: [[general partnership]]s, [[limited partnership]]s, and [[limited liability partnership]]s.<ref>{{Cite Journal|doi=10.5465/amj.2013.0581 |title=Friends and Profits Don't Mix: The Performance Implications of Repeated Partnerships |journal=Academy of Management Journal |volume=59 |issue=2 |page=460 |year=2014 |last1=Holloway |first1=S. S. |last2=Parmigiani |first2=A. }}</ref>
+* '''Corporation:'''  The owners of a [[corporation]] have [[limited liability]] and the business has a separate [[legal personality]] from its owners.  Corporations can be either [[State-owned enterprise|government-owned]] or privately owned. They can organize either for profit or as [[nonprofit organization]]s. A privately owned, for-profit corporation is owned by its [[shareholder]]s, who elect a [[board of directors]] to direct the corporation and hire its managerial staff.  A privately owned, for-profit corporation can be either [[privately held company|privately held]] by a small group of individuals, or [[public company|publicly held]], with publicly traded [[Share (finance)|shares]] listed on a [[stock exchange]].
+* '''Cooperative:''' Often referred to as a "co-op", a [[cooperative]] is a limited-liability business that can organize as for-profit or not-for-profit. A cooperative differs from a corporation in that it has members, not shareholders, and they share decision-making authority. Cooperatives are typically classified as either [[Consumers' co-operative|consumer cooperatives]] or [[worker cooperative]]s. Cooperatives are fundamental to the ideology of [[economic democracy]].
+* [[Limited liability company|Limited liability companies (LLC)]], limited liability partnerships, and other specific types of business organization protect their owners or shareholders from [[business failure]] by doing business under a separate legal entity with certain legal protections. In contrast, unincorporated businesses or persons working on their own are usually not as protected.<ref>[https://www.sba.gov/starting-business/choose-your-business-structure US Small Business Administration]</ref><ref>[http://smallbusinesschamberofcommerce.blogspot.com/ Small Business Chamber of Commerce, Inc.]</ref>
+* '''Franchises:''' A [[franchising|franchise]] is a system in which entrepreneurs purchase the rights to open and run a business from a larger corporation.<ref>[http://smallbusiness.chron.com/definition-franchise-business-4467.html Definition of a Franchise Business]</ref>  Franchising in the United States is widespread and is a major economic powerhouse.  One out of twelve retail businesses in the United States are franchised and 8 million people are employed in a franchised business.<ref>h{{Cite journal|doi=10.1080/1046669X.2011.533109|title=A Comparison of Retail Franchises, Independent Businesses, and Purchased Existing Independent Business Startups: Lessons from the Kauffman Firm Survey|journal=Journal of Marketing Channels|volume=18|page=3|year=2011|last1=Welsh|first1=Dianne H. B.|last2=Desplaces|first2=David E.|last3=Davis|first3=fAmy E.}}</ref>
+
+* '''A [[Private company limited by guarantee|company limited by guarantee]]'''.  Commonly used where companies are formed for noncommercial purposes, such as clubs or charities.  The members guarantee the payment of certain (usually nominal) amounts if the company goes into [[Liquidation|insolvent liquidation]], but otherwise, they have no economic rights in relation to the company. This type of company is common in [[England]]. A company limited by guarantee may be with or without having [[share capital]].
+* '''A [[Private company limited by shares|company limited by shares]]'''.  The most common form of the company used for business ventures. Specifically, a limited company is a "company in which the liability of each shareholder is limited to the amount individually invested" with corporations being "the most common example of a limited company."<ref name="Black's">Black's Law and lee Dictionary. Second Pocket Edition. Bryan A. Garner, editor. West. 2001.</ref> This type of company is common in [[England]] and many English-speaking countries. A company limited by shares may be a
+** [[Public company|publicly traded company]] or a
+** [[privately held company]].
+* '''A company limited by guarantee with a share capital'''.  A hybrid entity, usually used where the company is formed for noncommercial purposes, but the activities of the company are partly funded by investors who expect a return.  This type of company may no longer be formed in the UK, although provisions still exist in law for them to exist.<ref>Companies Act 2006</ref>
+* '''A [[limited liability company]]'''. "A company—statutorily authorized in certain states—that is characterized by limited liability, management by members or managers, and limitations on ownership transfer", i.e., L.L.C.<ref name="Black's" /> LLC structure has been called "hybrid" in that it "combines the characteristics of a corporation and of a partnership or sole proprietorship". Like a corporation, it has limited liability for members of the company, and like a partnership it has "flow-through taxation to the members" and must be "dissolved upon the death or bankruptcy of a member".<ref>{{cite web|url=http://www.investopedia.com/terms/l/llc.asp#ixzz2CEzgE239|title=Limited Liability Company (LLC) Definition - Investopedia|author=root|work=Investopedia}}</ref>
+* '''An [[unlimited company]] with or without a share capital'''. A hybrid entity, a company where the liability of members or shareholders for the debts (if any) of the company are not limited. In this case doctrine of a veil of incorporation does not apply.
+''Less common types of companies are:''
+* '''Companies formed by letters patent'''.  Most corporations by letters patent are ''[[Corporation sole|corporations sole]]'' and not companies as the term is commonly understood today.
+* '''[[Royal charter|Charter corporations]]'''.  Before the passing of modern companies legislation, these were the only types of companies.  Now they are relatively rare, except for very old companies that still survive (of which there are still many, particularly many British banks), or modern societies that fulfill a quasi-regulatory function (for example, the [[Bank of England]] is a corporation formed by a modern charter).
+* '''Statutory companies'''.  Relatively rare today, certain companies have been formed by a private statute passed in the relevant jurisdiction.
+Note that "Ltd after the company's name signifies limited company, and PLC ([[public limited company]]) indicates that its shares are widely held."{{cn|date=September 2013}}
+
+In legal parlance, the owners of a company are normally referred to as the "members". In a company limited or unlimited by shares (formed or incorporated with a share capital), this will be the [[Shareholder|shareholders]]. In a company limited by guarantee, this will be the guarantors. Some [[Offshore financial center|offshore jurisdictions]] have created special forms of [[offshore company]] in a bid to attract business for their jurisdictions. Examples include "[[Segregated portfolio company|segregated portfolio companies]]" and restricted purpose companies.
+
+There are, however, many, many sub-categories of types of company that can be formed in various jurisdictions in the world.
+
+Companies are also sometimes distinguished for legal and regulatory purposes between '''[[Public limited company|public companies]]''' and '''[[Privately held company|private companies]]'''. Public companies are companies whose shares can be publicly traded, often (although not always) on a [[stock exchange]] which imposes [[Listing (finance)|listing requirements]]/[[Listing Rules]] as to the issued shares, the trading of shares and future issue of shares to help bolster the reputation of the exchange or particular market of an exchange. Private companies do not have publicly traded shares, and often contain restrictions on transfers of shares. In some jurisdictions, private companies have maximum numbers of shareholders.
+
+A [[parent company]] is a company that owns enough voting stock in another firm to control management and operations by influencing or electing its board of directors; the second company being deemed as a subsidiary of the parent company. The definition of a parent company differs by jurisdiction, with the definition normally being defined by way of laws dealing with companies in that jurisdiction.
+
+== Classifications ==
+{{Main|Industry classification}}
+
+* [[Agriculture]], such as the domestication of fish, animals and livestock, as well as [[lumber industry|lumber]], [[oil industry|oil]] and [[mining industry|mining]] businesses that extract natural resources and raw materials, such as [[wood]], [[petroleum]], [[natural gas]], [[Ore|ores]], plants or [[Mineral|minerals]].
+* [[Finance|Financial]] [[Financial services|services]] businesses include [[bank]]s, [[brokerage firm]]s, [[credit union]]s, [[credit card company|credit cards]], [[insurance company|insurance companies]], [[asset management company|asset]] and [[investment company|investment companies]] such as [[private equity firm]]s, [[real estate investment trust]]s, [[sovereign wealth fund]]s, [[pension fund]]s, [[mutual fund]]s, [[index fund]]s, and [[hedge fund]]s, [[stock exchange]]s, and other companies that generate profits through investment and management of [[Capital (economics)|capital]].
+* [[Entertainment industry|Entertainment]] and [[mass media]] companies generate profits primarily from the sale of [[intellectual property]]. They include [[film studio]]s and [[production house]]s, mass media companies such as [[cable television network]]s, online [[digital media]] agencies, [[mobile media]] outlets, [[newspaper publisher|newspapers]], [[book publishing|book]] and [[magazine|magazine publishing]] houses.
+* Industrial [[manufacturing|manufacturers]] produce [[product (business)|products]], either from [[raw material]]s or from component parts, then export the finished products at a [[profit (accounting)|profit]]. They include [[tangible]] [[good (economics)|goods]] such as [[Automotive industry|cars]], [[Glass manufacturing|glass]], or [[aircraft manufacturing|aircraft]].
+* [[Real estate]] businesses sell, invest, construct and develop [[real property|properties]], including [[land]], residential [[home]]s, and other buildings.
+* [[Retail]]ers, [[Wholesaling|wholesalers]], and [[distribution (business)|distributors]] act as middlemen and get goods produced by manufacturers to the intended consumers; they make their profits by marking up their prices. Most stores and catalog companies are distributors or retailers.
+* [[Transport]]ation businesses such as [[Railway company|railways]], [[airline]]s, [[Shipping industry|shipping companies]] that deliver goods and individuals to their destinations for a fee.
+* [[Energy]] [[utilities]] produce [[public service]]s such as [[water]], [[electricity]], [[waste management]] or [[sewage treatment]], usually under the charge of a [[State-owned enterprise|government]].
+* [[Tertiary sector of the economy|Service businesses]] offer intangible goods or services and typically charge for labor or other services provided to [[government]], to [[consumer]]s, or to other businesses. Interior decorators, hairstylists, tanning salons, laundromats, and pest controllers are service businesses.
+
+== Activities ==
+=== Accounting ===
+{{Main|Accounting}}
+Accounting is the measurement, processing and communication of financial information about [[economic entity|economic entities]]<ref name = "NP 2013">{{cite book |last1=Needles |first1=Belverd E. |last2=Powers |first2=Marian |year=2013 |title=Principles of Financial Accounting |publisher=Cengage Learning |edition=12 |series=Financial Accounting Series}}</ref><ref>{{Cite report |date=November 1940 |title=Accounting Research Bulletins No. 7 Reports of Committee on Terminology |url=http://clio.lib.olemiss.edu/cdm/ref/collection/deloitte/id/9342 |publisher=Committee on Accounting Procedure, American Institute of Accountants |accessdate=31 December 2013}}</ref> such as [[business]]es and [[corporation]]s. The modern field was established by the [[Italians|Italian]] mathematician [[Luca Pacioli]] in 1494.<ref name=jkdiwan>{{cite book|last=DIWAN|first=Jaswith|title=ACCOUNTING CONCEPTS & THEORIES|publisher=MORRE|location=LONDON|id=id# 94452|pages=001–002}}</ref>  Accounting, which has been called the "language of business",<ref name="wharton-language">{{Citation | url =http://kwhs.wharton.upenn.edu/2013/09/peggy-bishop-lane-on-why-accounting-is-the-language-of-business/ | title =Peggy Bishop Lane on Why Accounting Is the Language of Business | publisher =Knowledge @ Wharton High School | date =September 23, 2013 | accessdate =25 December 2013 }}</ref> measures the results of an organization's economic activities and conveys this information to a variety of users, including [[investor]]s, [[creditor]]s, [[management]], and [[Regulatory agency|regulators]].<ref name = "UW Dept">{{cite web |url=http://www.foster.washington.edu/academic/departments/accounting/Pages/accounting.aspx |title=Department of Accounting |year=2013 |website=Foster School of Business |publisher=Foster School of Business |accessdate=31 December 2013}}</ref>  Practitioners of accounting are known as [[accountant]]s. The terms "accounting" and "financial reporting" are often used as synonyms.
+
+=== Finance ===
+{{Main|Finance}}
+Finance is a field that deals with the study of [[investments]]. It includes the dynamics of [[asset]]s and [[Liability (financial accounting)|liabilities]] over time under conditions of different degrees of uncertainty and risk. Finance can also be defined as the science of money management. Finance aims to price assets based on their risk level and their expected [[rate of return]]. Finance can be broken into three different sub-categories: [[public finance]], [[corporate finance]] and [[personal finance]].
+
+=== Manufacturing ===
+{{Main|Manufacturing}}
+[[Manufacturing]] is the production of [[merchandise]] for use or sale using labour and [[machine]]s, [[tool]]s, chemical and biological processing, or formulation. The term may refer to a range of human activity, from [[handicraft]] to [[High tech manufacturing|high tech]], but is most commonly applied to [[Industry|industrial]] production, in which [[raw material]]s are transformed into [[finished good]]s on a large scale.
+
+=== Marketing ===
+{{Main|Marketing}}
+Marketing is defined by the [[American Marketing Association]] as ''"the activity, set of institutions, and processes for creating, communicating, delivering, and exchanging offerings that have value for customers, clients, partners, and society at large."''<ref>Marketing definition approved in October 2007 by the [[American Marketing Association]]: [http://www.marketingpower.com/AboutAMA/Pages/DefinitionofMarketing.aspx].</ref> The term developed from the original meaning which referred literally to going to a market to buy or sell goods or services.  Marketing tactics include [[advertising]] as well as determining product [[pricing]].
+
+=== Research and development ===
+{{Main|Research and development}}
+Research and development refer to activities in connection with corporate or government innovation. Research and development constitute the first stage of development of a potential new service or product. Research and development are very difficult to manage since the defining feature of the research is that the researchers do not know in advance exactly how to accomplish the desired result. {{citation needed|date=July 2017}}
+
+=== Sales ===
+{{Main|Sales}}
+Sales are activity related to selling or the amount of goods or services sold in a given time period.
+
+== Management ==
+{{Main article|Management}}
+{{See also|Outline of business management}}
+The efficient and effective [[Business operations|operation of a business]], and study of this subject, is called [[management]]. The major branches of management are [[finance|financial management]], [[marketing]] management, [[organizational studies|human resource management]], [[strategic management]], [[manufacturing|production management]], [[operations management]], [[service management]], and [[information technology management]]. {{Citation needed|date=September 2011}}
+
+Owners may manage their businesses themselves, or employ managers to do so for them. Whether they are owners or employees, managers administer three primary components of the business' value: financial resources, capital (tangible resources), and human resources.  These resources are administered in at least five functional areas: legal contracting, manufacturing or service production, marketing, accounting, financing, and human resources.{{Citation needed|date=June 2011}}
+
+=== Restructuring state enterprises ===
+In recent decades, states modeled some of their [[asset]]s and enterprises after business enterprises. In 2003, for example, the [[China|People's Republic of China]] modeled 80% of its [[state-owned enterprise]]s on a company-type management system.<ref>[http://english.people.com.cn/data/China_in_brief/Economy/Major%20Industries.html Major Industries]. People.com</ref> Many state institutions and enterprises in China and Russia have transformed into joint-stock companies, with part of their shares being listed on public stock markets.
+
+Business process management (BPM) is a holistic management approach focused on aligning all aspects of an organization with the wants and needs of clients. BPM attempts to improve processes continuously. It can, therefore, be described as a "process optimization process". It is argued that BPM enables organizations to be more efficient, effective and capable of change than a functionally focused, traditional hierarchical management approach.{{who|date=October 2013}} <!-- also what does this have to do with state enterprises? -->
+
+== Organization and regulation ==
+{{See also|Theory of the firm}}
+Most legal [[jurisdiction]]s specify the forms of ownership that a business can take, creating a body of [[commercial law]] for each type.
+
+The major factors affecting how a business is organized are usually:
+* '''The size and scope of the business firm''' and its structure, management, and ownership, broadly analyzed in the [[theory of the firm]]. Generally, a smaller business is more flexible, while larger businesses, or those with wider ownership or more formal structures, will usually tend to be organized as corporations or (less often) partnerships. In addition, a business that wishes to raise money on a [[stock market]] or to be owned by a wide range of people will often be required to adopt a specific legal form to do so.
+* '''The sector and country.''' Private profit-making businesses are different from government-owned bodies. In some countries, certain businesses are legally obliged to be organized in certain ways.
+* '''[[Tax advantage]]s.''' Different structures are treated differently in tax law and may have advantages for this reason.
+* '''Disclosure and compliance requirements'''. Different business structures may be required to make less or more information public (or report it to relevant authorities) and may be bound to comply with different rules and regulations.
+
+Many businesses are operated through a separate entity such as a corporation or a partnership (either formed with or without limited liability). Most legal jurisdictions allow people to organize such an entity by filing certain charter documents with the relevant Secretary of State or equivalent and complying with certain other ongoing obligations. The relationships and legal rights of [[shareholder]]s, limited partners, or members are governed partly by the charter documents and partly by the law of the jurisdiction where the entity is organized. Generally speaking, shareholders in a corporation, limited partners in a limited partnership, and members in a limited liability company are shielded from [[Legal liability|personal liability]] for the debts and obligations of the entity, which is legally treated as a separate "person". This means that unless there is misconduct, the owner's own possessions are strongly protected in law if the business does not succeed.
+
+Where two or more individuals own a business together but have failed to organize a more specialized form of vehicle, they will be treated as a general partnership. The terms of a partnership are partly governed by a partnership agreement if one is created, and partly by the law of the jurisdiction where the partnership is located. No paperwork or filing is necessary to create a partnership, and without an agreement, the relationships and legal rights of the partners will be entirely governed by the law of the jurisdiction where the partnership is located. A single person who owns and runs a business is commonly known as a ''sole proprietor'', whether that person owns it directly or through a formally organized entity. Depending on the business needs, an adviser can decide what kind is proprietorship will be most suitable.
+
+A few relevant factors to consider in deciding how to operate a business include:
+
+# General partners in a partnership (other than a limited liability partnership), plus anyone who personally owns and operates a business without creating a separate legal entity, are personally liable for the debts and obligations of the business.
+# Generally, corporations are required to pay tax just like "real" people. In some tax systems, this can give rise to so-called [[double taxation]], because first the corporation pays tax on the profit, and then when the corporation distributes its profits to its owners, individuals have to include dividends in their income when they complete their personal tax returns, at which point a second layer of income tax is imposed.
+# In most countries, there are laws which treat small corporations differently from large ones. They may be exempt from certain legal filing requirements or labor laws, have simplified procedures in specialized areas, and have simplified, advantageous, or slightly different tax treatment.
+# "Going public" through a process known as an [[initial public offering]] (IPO) means that part of the business will be owned by members of the public. This requires the organization as a distinct entity, to disclose information to the public, and adhering to a tighter set of laws and procedures. Most public entities are corporations that have sold shares, but increasingly there are also public [[Limited liability company|LLC's]] that sell units (sometimes also called shares), and other more exotic entities as well, such as, for example, [[real estate investment trust]]s in the USA, and [[unit trust]]s in the UK. A general partnership cannot "go public".
+
+=== Commercial law ===
+{{Main article|Corporate law}}
+[[File:Downtownplazala.jpg|thumb|right|200px|[[Office]]s in the [[Los Angeles]] Downtown Financial District]]
+A very detailed and well-established body of rules that evolved over a very long period of time applies to commercial transactions. The need to regulate trade and commerce and resolve business disputes helped shape the creation of law and courts. The [[Code of Hammurabi]] dates back to about 1772 BC for example, and contains provisions that relate, among other matters, to [[Freight transport|shipping]] costs and dealings between merchants and [[broker]]s.<ref>{{cite web|url=http://mcadams.posc.mu.edu/txt/ah/assyria/hammurabi.html|title=Law Code of Hammurabi}}</ref> The word "corporation" derives from the Latin ''corpus'', meaning body, and the [[Maurya Empire]] in Iron-Age India accorded legal rights to business entities.<ref>{{cite web|url=http://www.law.yale.edu/documents/pdf/cbl/Khanna_Ancient_India_informal.pdf |title=The Economic History of the Corporate Form in Ancient India |author=Vikramaditya S. Khanna |deadurl=yes |archiveurl=https://web.archive.org/web/20131019095432/http://www.law.yale.edu/documents/pdf/cbl/Khanna_Ancient_India_informal.pdf |archivedate=2013-10-19 |df= }}</ref>
+
+In many countries, it is difficult to compile all the laws that can affect a business into a single reference source. Laws can govern treatment of labour and employee relations, [[Health and Safety Executive|worker protection and safety]], discrimination on the basis of age, gender, disability, race, and in some jurisdictions, sexual orientation, and the minimum wage,  as well as [[Trade union|unions]], worker compensation, and working hours and leave.
+
+Some specialized businesses may also require licenses, either due to laws governing entry into certain trades, occupations or professions, that require special education or to raise revenue for local governments. Professions that require special licenses include law, medicine, piloting aircraft, selling liquor, radio broadcasting, selling investment securities, selling used cars, and roofing. Local jurisdictions may also require special licenses and taxes just to operate a business.
+
+Some businesses are subject to ongoing special regulation, for example, [[Public utility|public utilities]], investment securities, banking, insurance, [[broadcasting]], [[aviation]], and health care providers. Environmental regulations are also very complex and can affect many businesses.
+
+=== Capital ===
+[[File:Bolsa Mexicana de Valores.png|thumb|left|[[Mexican Stock Exchange]] in [[Paseo de la Reforma]], Mexico City]] When businesses need to raise money (called [[Capital (economics)|capital]]), they sometimes offer [[Security (finance)|securities]] for sale.
+
+Capital may be raised through private means, by an [[initial public offering]] or IPO on a [[stock exchange]], or in other ways.
+
+Major stock exchanges include the Shanghai Stock Exchange, Singapore Exchange, Hong Kong Stock Exchange, [[New York Stock Exchange]] and [[NASDAQ]] (the USA), the [[London Stock Exchange]] (UK), the [[Tokyo Stock Exchange]] (Japan), and [[Bombay Stock Exchange]] (India). Most countries with capital markets have at least one.
+
+Businesses that have gone public are subject to regulations concerning their internal governance, such as how executive officers' compensation is determined, and when and how information is disclosed to shareholders and to the public. In the United States, these regulations are primarily implemented and enforced by the United States Securities and Exchange Commission (SEC). Other western nations have comparable regulatory bodies. The regulations are implemented and enforced by the China Securities Regulation Commission (CSRC) in China. In Singapore, the regulatory authority is the Monetary Authority of Singapore (MAS), and in Hong Kong, it is the Securities and Futures Commission (SFC).
+
+The proliferation and increasing complexity of the laws governing business have forced increasing specialization in corporate law. It is not unheard of for certain kinds of corporate transactions to require a team of five to ten attorneys due to sprawling regulation. Commercial law spans general corporate law, employment and labor law, health-care law, securities law, mergers and acquisitions, tax law, employee benefit plans, food and drug regulation, intellectual property law on copyrights, patents, trademarks, telecommunications law, and financing.
+
+Other types of capital sourcing include crowdsourcing on the Internet, venture capital, bank loans, and debentures.
+
+=== Intellectual property ===
+{{Main|Intellectual property}}
+Businesses often have important "[[intellectual property]]" that needs protection from competitors for the company to stay profitable. This could require [[patent]]s, [[copyright]]s, [[trademark]]s, or preservation of [[trade secret]]s. Most businesses have names, logos, and similar branding techniques that could benefit from trademarking. Patents and copyrights in the United States are largely governed by federal law, while trade secrets and trademarking are mostly a matter of state law. Because of the nature of intellectual property, a business needs protection in every jurisdiction in which they are concerned about competitors. Many countries are signatories to international [[treaty|treaties]] concerning intellectual property, and thus companies registered in these countries are subject to national laws bound by these treaties. In order to protect trade secrets, companies may require employees to sign noncompete clauses which will impose limitations on an employee's interactions with stakeholders, and competitors.
+
+===Trade union===
+{{Main|Trade union}}
+A trade union (or labor union) is an [[Political organisation#Labour unions|organization of workers]] who have come together to achieve common goals such as protecting the integrity of its trade, improving safety standards, achieving higher pay and benefits such as health care and retirement, increasing the number of employees an employer assigns to complete the work, and better [[working conditions]]. The trade union, through its leadership, bargains with the employer on behalf of union members ([[wikt: rank and file|rank and file]] members) and negotiates [[Labour and employment law|labor contracts]] ([[collective bargaining]]) with employers. The most common purpose of these associations or unions is "maintaining or improving the conditions of their [[employment]]".<ref name="Webb">{{cite book |last=Webb |first=Sidney |last2=Webb|first2= Beatrice |title=History of Trade Unionism |publisher=Longmans and Co. London |year=1920}} ch. I</ref> This may include the negotiation of [[wage]]s, work rules, complaint procedures, rules governing hiring, firing, and promotion of workers, benefits, [[Occupational safety and health|workplace safety]] and policies.
+
+== See also ==
+{{Wikipedia books}}
+{{Portal|Business and economics}}
+{{Main article|Outline of business}}
+{{columns-list|colwidth=18em|
+* [[Accounting]]
+** [[Index of accounting articles|List of accounting topics]]
+* [[Advertising]]
+* [[Bank]]
+* [[Big business]]
+* [[Business acumen]]
+* [[Business broker]]
+* [[Business ethics]]
+** [[Social responsibility]]
+* [[Business hours]]
+* [[Outline of commercial law|Business law topics]]
+* [[Business mathematics]]
+* [[Business mediator]]
+* [[Business school]]
+* [[Business tourism]]
+* [[Business valuation]]
+* [[Businessperson]]
+* [[Capitalism]]
+* [[Change management analyst]]
+* [[Commerce]]
+* [[Company]]
+* [[Corporate personhood]]
+* [[Cost overrun]]
+* [[E-commerce]]
+** [[Electronic business]]
+* [[Economics]]
+** [[Economic democracy]]
+** [[Financial economics]]
+** [[Outline of economics|List of economics topics]]
+* [[Entrepreneurship]]
+* [[Finance]]
+** [[Outline of finance|List of finance topics]]
+* [[Franchising]]
+* [[State ownership|Government ownership]]
+* [[Human resources]]
+* [[Industry]]
+* [[Innovation]]
+* [[Insurance]]
+* [[Intellectual property]]
+* [[Interim management]]
+* [[International trade]]
+** [[Index of international trade topics|List of international trade topics]]
+* [[Investment]]
+* [[Job creation program]]
+* [[Labour economics]]
+* [[Limited liability]]
+* [[List of company registers]]
+* [[List of largest employers]]
+* [[List of oldest companies]]
+* [[Lists of companies]]
+* [[Management information system]]
+* [[Manufacturing]]
+** [[Outline of production|List of production topics]]
+* [[Marketing]]
+** [[Outline of marketing|List of marketing topics]]
+* [[Money]]
+* [[Organizational studies]]
+* [[Profit (accounting)|Profit]]
+* [[Real estate]]
+** [[Index of real estate articles|List of real estate topics]]
+* [[Benefit shortfall|Revenue shortfall]]
+* [[Shareholder value]]
+* [[Small business]]
+* [[Strategic management]]
+* [[Strategic planning]]
+* [[Tax]]
+* [[Trade]]
+* [[Types of business entity]]
+}}
