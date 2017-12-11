@@ -19,7 +19,7 @@ for i in os.listdir(DATASET_FILE_DIR):
 	with open(fp) as f:
 		temp=f.read()
 
-	doc_id = re.search(r'<DOCNO>(\d+)</DOCNO>',temp).group(1)
+	doc_id = i
 
 	doc_full_text = re.search(r'<block class="full_text">([\w\s\W]*)</block>',temp)
 	if bool(doc_full_text) == True:
