@@ -234,7 +234,7 @@ class environment:
 					reward = reward + self.reward_quantum
 				else: 
 					off_topic_docs.append(i.split()[2])
-			print (reward)
+			#print (reward)
 
 
 			#fourth find the new state vector and update the number of total on topic docs

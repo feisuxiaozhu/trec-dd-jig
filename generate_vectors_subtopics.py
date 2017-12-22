@@ -55,7 +55,7 @@ def turnvector(size,list):
 		temp[i-1] = j
 	return temp
 
-
+Global = 0
 for i in os.listdir(topics_path): #topic loop
 	subtopics_path = topics_path+'/'+i
 	out=''
@@ -73,7 +73,7 @@ for i in os.listdir(topics_path): #topic loop
 			out = out+'<sub hiearchy number>'+ j +'</sub hiearchy number>\n'+\
 					'<sub hiearchy vector>'+str(result)+'</sub hiearchy vector><spliter>\n'
 			counter+=1
-
+		Global = counter
 	if counter > 1: #if more than one subtopic exists, create powerset of subtopics:
 		number_two_set = math.factorial(counter)/(2.0*math.factorial(counter-2.0)) #find the number of vectors that represents two subtopics
 		number_two_set = int(number_two_set)
@@ -84,7 +84,9 @@ for i in os.listdir(topics_path): #topic loop
 				vector = (vectors[i]+vectors[j])/2
 				out = out+'<sub hiearchy number>'+ str(number_of_subtopics+1) +'</sub hiearchy number>\n'+\
 				 '<sub hiearchy vector>'+str(vector)+'</sub hiearchy vector><spliter>\n'
+				Global =number_of_subtopics+1
 				number_of_subtopics+=1
+
 
 		if counter >2: #only need to do this if more than 2 subtopics exist
 			sum = vectors[0] #find the vector that represents all
@@ -93,7 +95,10 @@ for i in os.listdir(topics_path): #topic loop
 			sum = sum / (counter)
 			out = out+'<sub hiearchy number>'+ str(number_of_subtopics+1) +'</sub hiearchy number>\n'+\
 					 '<sub hiearchy vector>'+str(sum)+'</sub hiearchy vector><spliter>\n'
+			Global = number_of_subtopics+1
 
+
+	out = '<number of total subtopics>'+ str(Global) +'</number of total subtopics>\n'+out
 	f = open(subtopics_path+'/'+"sub_hiearchy_map.txt", 'w')
 	f.write(out)
 	f.close	

@@ -10,8 +10,8 @@ import json
 with open(TOPIC_FP) as f:
 	topics = f.readlines()
 
-EPISODES = 30
-RESERVE= 150
+EPISODES = 20
+RESERVE= 250
 ITERATION = 15
 batch_size = 32
 state_size = 75

@@ -18,7 +18,7 @@ agent = DQNAgent(state_size, action_size)
 done = False
 batch_size = 32
 
-EPISODES = 40
+EPISODES = 50
 RESERVE= 150
 ITERATION = 15
 for i in topics:
@@ -39,11 +39,15 @@ for i in topics:
 		state = np.reshape(state, [1,state_size])
 		#normalize the state vector:
 		state = state/env.num_of_on_topics
+		actions_taken=[]
+		reward_record=[]
 		for time in range(500):
 			action = agent.act(state)+1
 			action = str(action)
+			actions_taken.append(action)
 			#print(action)
 			next_state, reward, done = env.step(action)
+			reward_record.append(reward)
 			next_state = np.reshape(next_state, [1,state_size])
 			#normalize the vecotr as well
 			next_state = next_state/env.num_of_on_topics
@@ -51,11 +55,13 @@ for i in topics:
 			agent.remember(state, action, reward, next_state, done)
 			state = next_state
 			if done:
-				os.system('clear')
+				#os.system('clear')
 				print("topic under training: "+ topic_id+ " "+ topic_name)
 				print("episode: {}/{}, # of interations: {}, e: {:.2}".format(e, EPISODES, time, agent.epsilon))
-				print("number of on topic docs: " +str(env.num_of_on_topics))
+				#print("number of on topic docs: " +str(env.num_of_on_topics))
 				#after each episode, run the agent on test system see if score improves:
+				print("actions taken: "+ str(actions_taken))
+				print("reward received: " + str(reward_record))
 				break
 			if len(agent.memory) > batch_size:
 				agent.replay(batch_size)

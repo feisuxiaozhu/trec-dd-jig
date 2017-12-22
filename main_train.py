@@ -102,7 +102,7 @@ for i in topics:
 
 
 #Now run the trained agent and see how it works:
-N = 10 #total of ten rounds
+N = 2 #total of ten rounds
 results={}
 for i in topics:
 	reward_record = []
