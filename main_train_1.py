@@ -21,6 +21,33 @@ batch_size = 32
 EPISODES = 50
 RESERVE= 150
 ITERATION = 15
+
+def action_to_text(action):
+	result = ''
+	if action == "1":
+		result = "tourism impact of repairs"
+	elif action == "2":
+		result = "repair and plans"
+	elif action == "3":
+		result = "goals for future of tower"
+	elif action == "4":
+		result = "closing of tower"
+	elif action == "5":
+		result = "tourism impact of repairs & repair and plans"
+	elif action == "6":
+		result = "tourism impact of repairs & goals for future of tower"
+	elif action == "7":
+		result = "tourism impact of repairs & closing of tower"
+	elif action == "8":
+		result = "repair and plans & goals for future of tower"
+	elif action == "9":
+		result = "goals for future of tower & closing of tower"
+	else:
+		result = "tourism impact of repairs & repair and plans & goals for future of tower & closing of tower"
+
+	return result
+
+
 for i in topics:
 	#for each new topic reset the exploration rate
 	agent.epsilon = 1.0
@@ -41,10 +68,12 @@ for i in topics:
 		state = state/env.num_of_on_topics
 		actions_taken=[]
 		reward_record=[]
+		action_taken_text=[]
 		for time in range(500):
 			action = agent.act(state)+1
 			action = str(action)
 			actions_taken.append(action)
+			action_taken_text.append(action_to_text(action))
 			#print(action)
 			next_state, reward, done = env.step(action)
 			reward_record.append(reward)
@@ -61,6 +90,7 @@ for i in topics:
 				#print("number of on topic docs: " +str(env.num_of_on_topics))
 				#after each episode, run the agent on test system see if score improves:
 				print("actions taken: "+ str(actions_taken))
+				print("actions taken (text): " + str(action_taken_text))
 				print("reward received: " + str(reward_record))
 				break
 			if len(agent.memory) > batch_size:

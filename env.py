@@ -232,9 +232,9 @@ class environment:
 			self.number_of_iteration += 1
 			done = False #need to return done to be compatible with the DQN model we use
 			if reward == 0:
-				done = True #if reward is zero then done
-			if self.number_of_iteration >= self.number_of_max_iteration:
-				done = True
+			 	done = True #if reward is zero then done
+			if self.number_of_iteration > self.number_of_max_iteration:
+			 	done = True
 			return self.state, reward, done
 
 

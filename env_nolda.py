@@ -10,6 +10,56 @@ sys.path.append('/Users/shuchenzhu/Desktop/es_dd/trec-dd-jig/lda')
 from settings import *
 import numpy as np
 from subprocess import call
+import krovetzstemmer
+import gensim
+import nltk
+
+stemmer = krovetzstemmer.Stemmer()
+global word2stem
+word2stem = json.load(open("w2v/word2stem.json"))
+
+def stem(word):
+	
+	if word not in word2stem:
+		stemmed = stemmer.stem(word)
+		word2stem[word] = stemmed
+	return word2stem[word]
+
+word2vec = gensim.models.Word2Vec.load("w2v/word2vec.100")
+
+def get_word2vec(word, return_none_allowed=False):
+	if word in word2vec.wv.vocab:
+		return np.array(word2vec.wv.word_vec(word))
+
+	else:
+		if return_none_allowed:
+			return None
+		else:
+			return np.zeros((100,))
+
+stopwords={}
+with open('stopwords.txt','rU') as f:
+	for line in f:
+		stopwords[line.strip()]=1
+
+#input a paragraph and output a single w2v vector
+def turn_to_w2v(a):
+	words = []
+	sentences = nltk.sent_tokenize(a.lower())
+	vector = np.zeros(100)
+	for sentence in sentences:
+		tokens = nltk.word_tokenize(sentence)
+		text = [word for word in tokens if word not in stopwords]
+
+		for word in text:
+			words.append(word)
+
+	for i in words:
+		print(i)
+		temp = get_word2vec(stem(i),return_none_allowed=False)
+		vector += temp
+		
+	return vector
 
 def make_query_dsl(s):
 	query = {
@@ -133,6 +183,7 @@ class environment:
 		docscore={}
 		run_id = 'initialization'
 		temp = self.reserve.items()
+
 		for i,j in temp:
 			docscore[counter] = i+':'+str(j)
 			counter += 1
@@ -149,16 +200,19 @@ class environment:
 		self.search_history = docscore[0]+' '+docscore[1]+' '+docscore[2]+' '+docscore[3]+' '+docscore[4]+' </score>'
 
 
-
+		return_state = np.zeros(100)
 		with open(JIG_LOG_FP) as f:
 			contents = f.readlines()
 			
 			on_topic = False
 			on_topic_docs=[]
 			for i in contents:
-				print(i)
 				judge = i.split()[4]
 				if judge == '1': 
+					passage = i.split()[5:]
+					for j in passage:
+						temp_state = get_word2vec(stem(j),return_none_allowed=False)
+						return_state += temp_state
 					on_topic= True
 					on_topic_docs.append(i.split()[2])
 				#remove searched docs from reserve
@@ -166,18 +220,18 @@ class environment:
 				self.reserve.pop(used_doc)
 
 			#if no doc is on topic, the initial state is null
-			null = np.zeros(self.dimension)
+			null = np.zeros(100)
 			if on_topic == False: return null
 			#if there is on topic docs, find the initial state, which is the sum of on topic docs' vectors
-			running_sum = np.zeros(self.dimension)
-			for i in on_topic_docs:
-				vector = self.reserve_vector[i]
-				running_sum = vector + running_sum
+			# running_sum = np.zeros(self.dimension)
+			# for i in on_topic_docs:
+			# 	vector = self.reserve_vector[i]
+			# 	running_sum = vector + running_sum
 
 			#normalize state vector later, just store the number of on topic docs
 			self.num_of_on_topics = len(on_topic_docs) + self.num_of_on_topics
 			self.number_of_iteration += 1
-			return running_sum
+			return return_state
 
 	#given the action (topic from 1 to 12), return the top 5 docs that are most related to such topic to simulated user
 	def step(self, action):
@@ -208,7 +262,7 @@ class environment:
 					counter+=1
 
 			run_id = 'initialization'
-			a=["python", JIG_FP, "-runid", run_id, "-topic", self.topic_id, "-docs",docscore[0], docscore[1],docscore[2],docscore[3], docscore[4]]
+			a=["python", JIG_MODIFIED_FP, "-runid", run_id, "-topic", self.topic_id, "-docs",docscore[0], docscore[1],docscore[2],docscore[3], docscore[4]]
 			os.remove(JIG_LOG_FP)
 			subprocess.check_output(a)
 			#after check with jig, update search history
@@ -221,30 +275,35 @@ class environment:
 			for i in contents:
 				judge = i.split()[4]
 				if judge == '1':
+					passage = i.split()[5:]
+					for j in passage:
+						temp_state = get_word2vec(stem(j),return_none_allowed=False)
+						self.state += temp_state
 					on_topic_docs.append(i.split()[2])
 					reward = reward + self.reward_quantum
 
 			
 			#fourth find the new state vector and update the number of total on topic docs
-			for i in on_topic_docs:
-				vector = self.reserve_vector[i]
-				self.state = self.state + vector
+			# for i in on_topic_docs:
+			# 	vector = self.reserve_vector[i]
+			# 	self.state = self.state + vector
 			self.num_of_on_topics = len(on_topic_docs) + self.num_of_on_topics
 			self.number_of_iteration += 1
 			done = False #need to return done to be compatible with the DQN model we use
 			if reward == 0:
 				done = True #if reward is zero then done
-			if self.number_of_iteration >= self.number_of_max_iteration:
-				done = True
+			# if self.number_of_iteration >= self.number_of_max_iteration:
+			# 	done = True
 			return self.state, reward, done
 
 
 
 
-a = environment('Dwarf Planets','dd17-6',75,10,150)
+# a = environment('Dwarf Planets','dd17-6',75,10,150)
+
 # a.step('1')
-# a.step('2')
-# a.reset()
+# # a.step('2')
+# # a.reset()
 # print(a.state)
 #print(a.num_of_on_topics)
 #print(a.reserve_vector)

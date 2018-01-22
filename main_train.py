@@ -11,17 +11,19 @@ with open(TOPIC_FP) as f:
 	topics = f.readlines()
 
 #first create an agent for training
-state_size = 75
-action_size = 7
+state_size = 450
+action_size = 12
 agent = DQNAgent(state_size, action_size)
+print("DQN agent built")
 done = False
 batch_size = 32
 
 #create an environment for training on different topics
-EPISODES = 30
+EPISODES = 15
 RESERVE= 150
-ITERATION = 15
+ITERATION = 10
 for i in topics:
+	print(i)
 	#for each new topic reset the exploration rate
 	agent.epsilon = 1.0
 	topic_number = i.split()[0]
@@ -32,7 +34,7 @@ for i in topics:
 		topic_name = topic_name + j +' '
 
 	env = environment(topic_name,topic_id, state_size,ITERATION, RESERVE)
-
+	print("environment done")
 	#train agent over this specific environment (topic)
 	for e in range(EPISODES):
 		state = env.reset()
@@ -102,7 +104,7 @@ for i in topics:
 
 
 #Now run the trained agent and see how it works:
-N = 2 #total of ten rounds
+N = 10 #total of ten rounds
 results={}
 for i in topics:
 	reward_record = []
@@ -127,8 +129,8 @@ for i in topics:
 		reward_record.append(reward)
 		if done:
 			break
-		if reward_record[k-1]/reward_record[k]>=2: #huge drop of number of on topic docs
-			break
+		# if reward_record[k-1]/reward_record[k]>=2: #huge drop of number of on topic docs
+		#  	break
 		next_state = np.reshape(next_state, [1,state_size])
 		#next_state = next_state / env.num_of_on_topics
 		action = int(action)-1

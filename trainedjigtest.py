@@ -3,8 +3,8 @@ import json
 import os
 from subprocess import call
 from config import *
-RUN_ID = 'test2'
-N=5
+RUN_ID = 'test109'
+N=10
 basedocresults = json.load(open(TRAINED_RESULT_FP))
 for topic in basedocresults:
 	temp = re.split(r'</score>',basedocresults[topic])
