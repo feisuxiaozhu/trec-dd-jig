@@ -32,6 +32,8 @@ reward_5 = 0
 reward_6 = 0
 reward_7 = 0
 reward_8 = 0
+reward_9 = 0
+reward_10 = 0
 
 #Now run the trained agent and see how it works:
 N = 10 #total of ten rounds
@@ -56,6 +58,7 @@ for i in topics:
 		action = random.randint(1,12)
 		action = str(action)
 		next_state, reward, done = env.step(action)
+
 		if k == 0: reward_2 += reward
 		if k == 1: reward_3 += reward
 		if k == 2: reward_4 += reward
@@ -63,6 +66,10 @@ for i in topics:
 		if k == 4: reward_6 += reward
 		if k == 5: reward_7 += reward
 		if k == 6: reward_8 += reward
+		if k == 7: reward_9 += reward
+		if k == 8: reward_10 += reward
+
+
 
 		reward_record.append(reward)
 		if done:
@@ -88,6 +95,8 @@ reward_5 = reward_5/60
 reward_6 = reward_6/60
 reward_7 = reward_7/60
 reward_8 = reward_8/60
+reward_9 = reward_9/60
+reward_10 = reward_10/60
 
 print('average reward 2: ' +str(reward_2))
 print('average reward 3: ' +str(reward_3))
@@ -96,8 +105,8 @@ print('average reward 5: '+ str(reward_5))
 print('average reward 6: ' +str(reward_6))
 print('average reward 7: ' +str(reward_7))
 print('average reward 8: ' +str(reward_8))
-
-
+print('average reward 9: ' +str(reward_9))
+print('average reward 10: ' +str(reward_10))
 
 
 
