@@ -1,4 +1,4 @@
-from env_subtopics import environment
+from env_subtopics_lemur import environment
 from dqn import DQNAgent
 from config import *
 import numpy as np

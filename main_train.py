@@ -1,4 +1,4 @@
-from env import environment
+from env_lemur import environment
 from dqn import DQNAgent
 from config import *
 import numpy as np
@@ -11,7 +11,7 @@ with open(TOPIC_FP) as f:
 	topics = f.readlines()
 
 #first create an agent for training
-state_size = 225
+state_size = 300
 action_size = 12
 agent = DQNAgent(state_size, action_size)
 print("DQN agent built")
@@ -19,8 +19,8 @@ done = False
 batch_size = 32
 
 #create an environment for training on different topics
-EPISODES = 15
-RESERVE= 175
+EPISODES = 25
+RESERVE= 150
 ITERATION = 10
 for i in topics:
 	#for each new topic reset the exploration rate
