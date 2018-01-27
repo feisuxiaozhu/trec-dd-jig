@@ -1,4 +1,4 @@
-from env import environment
+from env_lemur import environment
 from dqn import DQNAgent
 from config import *
 import numpy as np
@@ -12,7 +12,7 @@ with open(TOPIC_FP) as f:
 	topics = f.readlines()
 
 #first create an agent for training
-state_size = 75
+state_size = 300
 action_size = 12
 agent = DQNAgent(state_size, action_size)
 print("DQN agent built")

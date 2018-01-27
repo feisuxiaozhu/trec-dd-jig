@@ -14,7 +14,7 @@ EPISODES = 20
 RESERVE= 150
 ITERATION = 15
 batch_size = 32
-state_size = 300
+state_size = 375
 agent={}
 for i in topics: # create an agent and an env for each topic
 	topic_number = i.split()[0]
